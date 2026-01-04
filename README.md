@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Innerwear Store - Full-Stack Product Listing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Repository**: https://github.com/abhishekbanglr2511-max/Shopping_website_demo  
+**(Monorepo containing both Frontend and Backend)**
 
-## Available Scripts
+This is a complete full-stack implementation of the **Developer Test Assignment** for a responsive Product Listing Page focused on **Clothing-Innerwear**.
 
-In the project directory, you can run:
+The project is structured as a monorepo with:
+- **Frontend**: React (in `/public` and `/src`)
+- **Backend**: Django + Django REST Framework + SQLite (in `/backend` and `/products`)
 
-### `npm start`
+## Features Implemented
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Required
+- Display 6+ products with real images, name, price, short description, and "Add to Cart" button
+- Add to Cart functionality with live cart count in header
+- Sort by price (Low to High / High to Low)
+- Filter by category (Men / Women / Kids) 
+- Fully responsive design for mobile and desktop
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Bonus (All Implemented)
+- Search functionality by product name
+- Clean and modern UI with subtle fade-in animations
+- API integration (React consumes Django REST API)
+- Dedicated Cart page showing items, quantity, subtotal, GST (18%), and total price
+- Proper folder structure and clean code organization
 
-### `npm test`
+## Tech Stack
+- **Frontend**: React, Axios, Custom CSS
+- **Backend**: Python + Django + Django REST Framework
+- **Database**: SQLite (lightweight, zero-setup, persistent via `db.sqlite3`)
+- **Version Control**: GitHub
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+innerware-store/
+├── backend/                  # Django project configuration
+│   ├── settings.py
+│   ├── urls.py
+│   └── products/             # Django app
+│       ├── models.py
+│       ├── views.py
+│       ├── serializers.py
+│       └── urls.py
+├── public/                   # React public assets
+│   └── index.html
+├── src/                      # React source code
+│   ├── components/           # Reusable components
+│   │   ├── Header.js
+│   │   ├── Product.js
+│   │   ├── ProductList.js
+│   │   └── Cart.js
+│   ├── App.js                # Main App component
+│   ├── App.css               # Global styles
+│   └── index.js              # React entry point
+├── venv/                     # Virtual environment
+├── db.sqlite3                # SQLite database
+├── manage.py                 # Django management script
+├── package.json              # React dependencies
+├── requirements.txt          # Python dependencies
+├── .gitignore
+└── README.md
+```
